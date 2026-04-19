@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { loginUser } from "../../service/AuthService";
+import { loginUser } from "../../service/authService";
 import { StoreContext } from "../../context/StoreContext";
 import { toast } from 'react-toastify';
 

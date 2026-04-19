@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { registerUser } from "../../service/AuthService";
+import { registerUser } from "../../service/authService";
 
 const Register = () => {
   const navigate = useNavigate();
