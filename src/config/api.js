@@ -25,7 +25,7 @@ export const API_ENDPOINTS = {
 
 // Axios instance configuration
 export const AXIOS_CONFIG = {
-  timeout: 10000,
+  timeout: 120000, // 120s to handle Render free tier cold starts
   headers: {
     "Content-Type": "application/json",
   },
