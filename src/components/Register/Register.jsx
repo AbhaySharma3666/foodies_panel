@@ -29,8 +29,13 @@ const Register = () => {
         toast.error("Registration failed. Please try again.");
       }
     } catch (error) {
-      if (error.response?.data?.message) {
+      if (error.response?.status === 409) {
+        toast.error("This email is already registered. Please log in.");
+      } else if (error.response?.data?.message) {
         toast.error(error.response.data.message);
+      } else if (error.response?.data?.errors) {
+        const firstError = Object.values(error.response.data.errors)[0];
+        toast.error(firstError);
       } else {
         toast.error("Unable to register. Please try again.");
       }
