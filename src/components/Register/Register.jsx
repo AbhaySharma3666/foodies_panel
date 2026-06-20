@@ -89,6 +89,7 @@ const Register = () => {
                     name="password"
                     onChange={onChangeHandler}
                     value={data.password}
+                    minLength={6}
                     required
                   />
                   <label htmlFor="floatingPassword">Password</label>
